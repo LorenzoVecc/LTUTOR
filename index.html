@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ripetizioni | Matematica e Informatica</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGG9PG4QGE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WGG9PG4QGE');
+      
+      // Tracciamento automatico dei click
+      document.addEventListener('click', function(e) {
+        // Ignora click su elementi senza ID o classe
+        if (!e.target.id && !e.target.className) return;
+        
+        // Ignora click su elementi di navigazione
+        const ignoredElements = ['nav', 'a', 'button', 'input'];
+        if (ignoredElements.includes(e.target.tagName.toLowerCase())) return;
+        
+        // Invia l'evento a Google Analytics
+        gtag('event', 'click', {
+          'event_category': 'engagement',
+          'event_label': e.target.id || e.target.className || e.target.tagName,
+          'value': 1
+        });
+      });
+    </script>
+    <meta name="description" content="Lezioni private di matematica e informatica. Preparazione esami, aiuto compiti e ripetizioni. Anche online!">
+    <meta name="keywords" content="ripetizioni, matematica, informatica, lezioni private, esami, compiti, C++, Python, Flowchart">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://g4ps0.github.io/loretutor/">
+    <meta property="og:title" content="Ripetizioni di Matematica e Informatica">
+    <meta property="og:description" content="Lezioni private di matematica e informatica. Preparazione esami, aiuto compiti e ripetizioni. Anche online!">
+    <meta property="og:image" content="https://g4ps0.github.io/loretutor/images/Postazione.jpg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://g4ps0.github.io/loretutor/">
+    <meta property="twitter:title" content="Ripetizioni di Matematica e Informatica">
+    <meta property="twitter:description" content="Lezioni private di matematica e informatica. Preparazione esami, aiuto compiti e ripetizioni. Anche online!">
+    <meta property="twitter:image" content="https://g4ps0.github.io/loretutor/images/Postazione.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- NAVBAR LTUTOR -->
+    <nav class="ltutor-navbar">
+        <div class="container">
+            <a href="index.html" class="ltutor-logo">
+                <div class="ltutor-logo-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <span class="ltutor-wordmark"><span class="lt-l">L</span><span class="lt-tutor">TUTOR</span></span>
+                <span class="ltutor-tagline">Il tuo team di tutor</span>
+            </a>
+            <nav class="ltutor-nav-links">
+                <a href="index.html#team">Team</a>
+                <a href="index.html#about">Chi siamo</a>
+                <a href="index.html#contact">Contatti</a>
+            </nav>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <div class="profile-header">
+                <div class="profile-photo">
+                    <img src="images/fotoprofilo.jpg" alt="Foto del docente" class="profile-img">
+                </div>
+                <div class="header-text">
+                    <h1>Ripetizioni | Compiti | Esami</h1>
+                    <p class="tagline">Matematica 🧮 | Informatica ⌨️</p>
+                    <p class="subtagline">Flowchart | C++ | Python</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SELEZIONE TUTOR -->
+    <section id="team" class="section team-picker-section">
+        <div class="container">
+            <div class="team-intro">
+                <h2>Scegli il tuo Tutor</h2>
+                <p class="section-subtitle">Clicca su un profilo per scoprire il tutor e prenotare una lezione</p>
+            </div>
+            <div class="tutors-grid">
+
+                <!-- COORDINATORE — scroll a Chi Sono -->
+                <a href="#about" class="tutor-card active" id="tutor-coordinatore">
+                    <div class="coordinator-badge">
+                        <i class="fas fa-crown"></i> Coordinatore
+                    </div>
+                    <div class="tutor-photo-wrapper">
+                        <div class="tutor-photo-ring"></div>
+                        <img src="images/fotoprofilo.jpg" alt="Foto del coordinatore" class="tutor-photo">
+                        <div class="availability-dot available" title="Disponibile"></div>
+                    </div>
+                    <div class="tutor-info">
+                        <h3 class="tutor-name">Lorenzo</h3>
+                        <p class="tutor-title">Ing. Informatica · AI&amp;ML</p>
+                        <div class="tutor-tags">
+                            <span>Matematica</span>
+                            <span>C++</span>
+                            <span>Python</span>
+                            <span>Flowchart</span>
+                        </div>
+                        <div class="tutor-cta">Vedi profilo <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </a>
+
+                <!-- TUTOR 2 -->
+                <a href="tutor2.html" class="tutor-card tbd" id="tutor-2">
+                    <div class="tutor-photo-wrapper">
+                        <div class="tutor-photo-ring tbd-ring"></div>
+                        <div class="tutor-photo-empty"><i class="fas fa-user-plus"></i></div>
+                        <div class="availability-dot coming-soon" title="Prossimamente"></div>
+                    </div>
+                    <div class="tutor-info">
+                        <h3 class="tutor-name tbd-name">Tutor #2</h3>
+                        <p class="tutor-title">Prossimamente</p>
+                        <div class="tbd-label"><i class="fas fa-hourglass-half"></i> To Be Defined</div>
+                    </div>
+                </a>
+
+                <!-- TUTOR 3 -->
+                <a href="tutor3.html" class="tutor-card tbd" id="tutor-3">
+                    <div class="tutor-photo-wrapper">
+                        <div class="tutor-photo-ring tbd-ring"></div>
+                        <div class="tutor-photo-empty"><i class="fas fa-user-plus"></i></div>
+                        <div class="availability-dot coming-soon" title="Prossimamente"></div>
+                    </div>
+                    <div class="tutor-info">
+                        <h3 class="tutor-name tbd-name">Tutor #3</h3>
+                        <p class="tutor-title">Prossimamente</p>
+                        <div class="tbd-label"><i class="fas fa-hourglass-half"></i> To Be Defined</div>
+                    </div>
+                </a>
+
+                <!-- TUTOR 4 -->
+                <a href="tutor4.html" class="tutor-card tbd" id="tutor-4">
+                    <div class="tutor-photo-wrapper">
+                        <div class="tutor-photo-ring tbd-ring"></div>
+                        <div class="tutor-photo-empty"><i class="fas fa-user-plus"></i></div>
+                        <div class="availability-dot coming-soon" title="Prossimamente"></div>
+                    </div>
+                    <div class="tutor-info">
+                        <h3 class="tutor-name tbd-name">Tutor #4</h3>
+                        <p class="tutor-title">Prossimamente</p>
+                        <div class="tbd-label"><i class="fas fa-hourglass-half"></i> To Be Defined</div>
+                    </div>
+                </a>
+
+                <!-- TUTOR 5 -->
+                <a href="tutor5.html" class="tutor-card tbd" id="tutor-5">
+                    <div class="tutor-photo-wrapper">
+                        <div class="tutor-photo-ring tbd-ring"></div>
+                        <div class="tutor-photo-empty"><i class="fas fa-user-plus"></i></div>
+                        <div class="availability-dot coming-soon" title="Prossimamente"></div>
+                    </div>
+                    <div class="tutor-info">
+                        <h3 class="tutor-name tbd-name">Tutor #5</h3>
+                        <p class="tutor-title">Prossimamente</p>
+                        <div class="tbd-label"><i class="fas fa-hourglass-half"></i> To Be Defined</div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Chi Sono</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Sono laureato in Ingegneria Informatica e studente magistrale in "Intelligenza Artificiale & Machine Learning" 🎓</p>
+                    <p>Offro lezioni da ormai tanti anni ed ho seguito centinaia di ragazzi collaborando anche con alcune delle più grandi organizzazioni di supporto agli studenti quali Tutornow, Superprof, ecc...</p>
+                </div>
+                <div class="postazione-container">
+                    <img src="images/Postazione.jpg" alt="La mia postazione di lavoro" class="postazione-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2>Contattami</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-phone"></i> <a href="tel:+393518933300">351 8933300</a></p>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/393518933300" target="_blank" class="whatsapp-link">Scrivimi su WhatsApp</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> Lezioni disponibili in presenza e online</p>
+                <p class="highlight-text">ANCHE COMODAMENTE DA CASA! 💻</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="section bg-light">
+        <div class="container">
+            <h2>Come Funziona</h2>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Lezioni Online</h3>
+                    <p>Utilizzo un Lenovo Ideapad con penna grafica e OneNote per una lavagna virtuale interattiva.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Metodo Interattivo</h3>
+                    <p>Ragioniamo insieme per risolvere gli esercizi, seguendo il tuo libro di testo o con materiale personalizzato.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Materiale Incluso</h3>
+                    <p>Riceverai tutto il materiale in formato PDF dopo ogni lezione, così potrai concentrarti sull'apprendimento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="section">
+        <div class="container">
+            <h2>Modalità di Lezione</h2>
+            <div class="pricing-options">
+                <div class="pricing-option">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Lezione in Presenza</h3>
+                    <p>Lezioni frontali personalizzate con approccio one-to-one</p>
+                </div>
+                <div class="pricing-option highlight">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Lezione Online</h3>
+                    <p>Comodamente da casa tua con <i class="fab fa-google"></i> Google Meet</p>
+                    <p class="meet-description">Le lezioni si svolgono su Google Meet, la piattaforma di videoconferenza professionale di Google</p>
+                </div>
+                <div class="pricing-option">
+                    <i class="fas fa-tags"></i>
+                    <h3>Pacchetto Ore</h3>
+                    <p>Opzione flessibile con pacchetti personalizzabili</p>
+                </div>
+            </div>
+            
+            <div class="package-details">
+                <h3>Perché scegliere le lezioni online?</h3>
+                <div class="package-features">
+                    <div class="package-feature">
+                        <i class="fas fa-video"></i>
+                        <h4>Videochiamata HD</h4>
+                        <p>Audio e video di alta qualità per una esperienza ottimale</p>
+                    </div>
+                    <div class="package-feature">
+                        <i class="fas fa-share-screen"></i>
+                        <h4>Condivisione schermo</h4>
+                        <p>Possibilità di condividere appunti, esercizi e risorse in tempo reale</p>
+                    </div>
+                    <div class="package-feature">
+                        <i class="fas fa-comments"></i>
+                        <h4>Chat integrata</h4>
+                        <p>Scambio di messaggi e materiali durante la lezione</p>
+                    </div>
+                </div>
+                <p class="package-note">Per informazioni dettagliate su prezzi e pacchetti, contattami senza impegno!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="lezioni" class="section">
+        <div class="container">
+            <h2 class="section-title">Esempi di Lezioni</h2>
+            <p class="section-subtitle">Guarda alcuni esempi delle mie lezioni</p>
+            
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/lezioni/4b5ab5f6-97df-4428-afd4-932a1fd5e732.jpeg" alt="Lezione di Analisi Matematica" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <p>Analisi Matematica</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/lezioni/4c53d434-f4e8-4fa9-a2c4-ce9db062ce72.jpeg" alt="Lezione di Matematica" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <p>Matematica Avanzata</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/lezioni/82c8ab8e-58d5-4c2e-98c9-347112fd89d1.jpeg" alt="Lezione di Programmazione" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <p>Programmazione C++</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/lezioni/96799a45-1d46-4883-a39e-1b289f3f1756.jpeg" alt="Lezione di Python" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <p>Programmazione Python</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/lezioni/ba321837-909c-4e35-afe0-a3dad1e953db.jpeg" alt="Lezione di Matematica" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <p>Matematica Base</p>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background: #f5f5f5; display: flex; align-items: center; justify-content: center; cursor: default;">
+                    <p style="color: #666; font-size: 1.2rem; text-align: center; padding: 20px;">Altre lezioni in arrivo...</p>
+                </div>
+            </div>
+
+            <div class="lesson-notes">
+                <p><strong>Nota:</strong> Ogni lezione è personalizzabile in base alle tue esigenze. Contattami per maggiori dettagli.</p>
+                <a href="#contact" class="btn btn-primary">Prenota una Lezione</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section">
+        <div class="container">
+            <h2>Referenze e Successi</h2>
+            <p class="section-subtitle">Alcuni dei risultati ottenuti dai miei studenti</p>
+            
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/referenze/Screenshot 2025-06-18 191651.png" alt="Risultati studente" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <p>Risultati di uno studente</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/referenze/Screenshot 2025-06-18 191717.png" alt="Esercitazione" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <p>Esercitazione svolta</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/referenze/Screenshot 2025-06-18 191748.png" alt="Progetto" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <p>Progetto di programmazione</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/referenze/Screenshot 2025-06-18 191806.png" alt="Verifica" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <p>Verifica superata</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/referenze/Screenshot 2025-06-18 191821.png" alt="Esercizio" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <p>Esercizio svolto</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/referenze/Screenshot 2025-06-18 191851.png" alt="Risultati" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <p>Risultati conseguiti</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-cta">
+                <p>Vuoi anche tu ottenere risultati come questi?</p>
+                <a href="#contact" class="btn">Contattami ora</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Ripetizioni di Matematica e Informatica. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <span class="nav prev">&#10094;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <span class="nav next">&#10095;</span>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

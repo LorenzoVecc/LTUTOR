@@ -11,15 +11,19 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lorenzovecc.github.io/LTUTOR/">
     <meta property="og:title" content="LTUTOR | Ripetizioni di Matematica e Informatica">
-    <meta property="og:description" content="Lezioni private, compiti ed esami con il team LTUTOR. Prenota ora la tua lezione online o in presenza.">
-    <meta property="og:image" content="images/Postazione.jpg">
+    <meta property="og:description" content="Lezioni private, aiuto compiti e preparazione esami con il team LTUTOR. Matematica e Informatica per tutti i livelli.">
+    <meta property="og:image" content="https://lorenzovecc.github.io/LTUTOR/images/Postazione.jpg">
 
     <!-- Twitter Social Media Tags -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://lorenzovecc.github.io/LTUTOR/">
     <meta name="twitter:title" content="LTUTOR | Ripetizioni di Matematica e Informatica">
-    <meta name="twitter:description" content="Lezioni private, compiti ed esami con il team LTUTOR.">
-    <meta name="twitter:image" content="images/Postazione.jpg">
-    
+    <meta name="twitter:description" content="Lezioni private, aiuto compiti e preparazione esami con il team LTUTOR. Matematica e Informatica for tutti i livelli.">
+    <meta name="twitter:image" content="https://lorenzovecc.github.io/LTUTOR/images/Postazione.jpg">
+
+    <meta name="description" content="Lezioni private di matematica e informatica. Preparazione esami, aiuto compiti e ripetizioni online e in presenza.">
+    <meta name="keywords" content="ripetizioni, matematica, informatica, lezioni private, esami, compiti, C++, Python, Flowchart">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGG9PG4QGE"></script>
     <script>
@@ -30,14 +34,9 @@
       
       // Tracciamento automatico dei click
       document.addEventListener('click', function(e) {
-        // Ignora click su elementi senza ID o classe
         if (!e.target.id && !e.target.className) return;
-        
-        // Ignora click su elementi di navigazione
         const ignoredElements = ['nav', 'a', 'button', 'input'];
         if (ignoredElements.includes(e.target.tagName.toLowerCase())) return;
-        
-        // Invia l'evento a Google Analytics
         gtag('event', 'click', {
           'event_category': 'engagement',
           'event_label': e.target.id || e.target.className || e.target.tagName,
@@ -45,20 +44,6 @@
         });
       });
     </script>
-    <meta name="description" content="Lezioni private di matematica e informatica. Preparazione esami, aiuto compiti e ripetizioni. Anche online!">
-    <meta name="keywords" content="ripetizioni, matematica, informatica, lezioni private, esami, compiti, C++, Python, Flowchart">
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://g4ps0.github.io/loretutor/">
-    <meta property="og:title" content="Ripetizioni di Matematica e Informatica">
-    <meta property="og:description" content="Lezioni private di matematica e informatica. Preparazione esami, aiuto compiti e ripetizioni. Anche online!">
-    <meta property="og:image" content="https://g4ps0.github.io/loretutor/images/Postazione.jpg">
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://g4ps0.github.io/loretutor/">
-    <meta property="twitter:title" content="Ripetizioni di Matematica e Informatica">
-    <meta property="twitter:description" content="Lezioni private di matematica e informatica. Preparazione esami, aiuto compiti e ripetizioni. Anche online!">
-    <meta property="twitter:image" content="https://g4ps0.github.io/loretutor/images/Postazione.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">

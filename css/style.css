@@ -737,6 +737,13 @@ img { max-width: 100%; height: auto; display: block; }
     .tutor-photo-empty { font-size: 1.6rem; }
 }
 
+/* Join section responsive */
+@media (max-width: 820px) {
+    #join > .container > div {
+        grid-template-columns: 1fr !important;
+    }
+}
+
 /* ----------------------------------------------------------------
    8. FEATURE CARDS (pillars / vantaggi)
    ---------------------------------------------------------------- */

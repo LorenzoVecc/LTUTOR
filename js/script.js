@@ -3,37 +3,7 @@
    Script condiviso per tutte le pagine del brand
    ================================================================ */
 
-// 1. PRELOADER HIDE (Apertura animata)
-window.addEventListener('load', () => {
-    const preloader = document.querySelector('.preloader');
-    if (preloader) {
-        setTimeout(() => {
-            preloader.classList.add('hidden');
-            setTimeout(() => {
-                preloader.style.display = 'none';
-            }, 800);
-        }, 600); // durata visibilità prima di sfumare
-    }
-});
-
 document.addEventListener('DOMContentLoaded', () => {
-
-    /* -------------------------------------------------------
-       TYPING EFFECT (Sottotitolo Hero)
-    ------------------------------------------------------- */
-    const typeLabel = document.querySelector('.typing-sub');
-    if (typeLabel) {
-        const text = typeLabel.dataset.type;
-        let i = 0;
-        function typeWriter() {
-            if (i < text.length) {
-                typeLabel.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 40);
-            }
-        }
-        setTimeout(typeWriter, 1200); // Inizia dopo che il preloader scompare
-    }
 
     /* -------------------------------------------------------
        1. ANNO NEL FOOTER

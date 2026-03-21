@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* -------------------------------------------------------
-       9. MAGNETIC BUTTONS (Elite Micro-interaction)
+       9. MAGNETIC BUTTONS (Premium Micro-interactions)
     ------------------------------------------------------- */
     if (window.innerWidth > 1024) { 
         const magneticElements = document.querySelectorAll('.btn, .nav-cta, .tutor-card, .subject-card');

@@ -141,7 +141,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* ----------------------------------------------------------------
-   ELITE INTERACTION (Smooth & Unique)
+   PREMIUM INTERACTION (Smooth & Unique)
    ---------------------------------------------------------------- */
 
 /* Card Interaction Base */
@@ -464,7 +464,7 @@ img { max-width: 100%; height: auto; display: block; }
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Card Elite States */
+/* Card States */
 .tutor-card, .subject-card, .price-card {
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), 
                 box-shadow 0.4s ease-out, 

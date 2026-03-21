@@ -151,6 +151,102 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* -------------------------------------------------------
+       8. PARTICLES AI — Hero Background
+    ------------------------------------------------------- */
+    const canvas = document.getElementById('hero-particles');
+    if (canvas) {
+        const ctx             = canvas.getContext('2d');
+        let particles         = [];
+        const particleCount   = 55;
+        const connectionDist  = 140;
+
+        const resize = () => {
+            canvas.width  = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+        };
+        window.addEventListener('resize', resize);
+        resize();
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 0.45;
+                this.vy = (Math.random() - 0.5) * 0.45;
+                this.radius = Math.random() * 1.5 + 1;
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(58, 141, 141, 0.4)';
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+
+        const animate = () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particles.length; i++) {
+                const p1 = particles[i];
+                p1.update();
+                p1.draw();
+                for (let j = i + 1; j < particles.length; j++) {
+                    const p2 = particles[j];
+                    const dx = p1.x - p2.x;
+                    const dy = p1.y - p2.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < connectionDist) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(58, 141, 141, ${0.15 * (1 - dist / connectionDist)})`;
+                        ctx.lineWidth = 0.8;
+                        ctx.moveTo(p1.x, p1.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animate);
+        };
+        animate();
+    }
+
+    /* -------------------------------------------------------
+       9. MAGNETIC BUTTONS (Elite Micro-interaction)
+    ------------------------------------------------------- */
+    if (window.innerWidth > 1024) { 
+        const magneticElements = document.querySelectorAll('.btn, .nav-cta, .tutor-card, .subject-card');
+        magneticElements.forEach(el => {
+            el.addEventListener('mousemove', (e) => {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                
+                // Se è una card, usa le variabili CSS per non sovrascrivere l'hover
+                if (el.classList.contains('tutor-card') || el.classList.contains('subject-card')) {
+                    el.style.setProperty('--mag-x', `${x * 0.1}px`);
+                    el.style.setProperty('--mag-y', `${y * 0.1}px`);
+                } else {
+                    el.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px) scale(1.03)`;
+                }
+            });
+            el.addEventListener('mouseleave', () => {
+                el.style.transform = '';
+                el.style.setProperty('--mag-x', '0px');
+                el.style.setProperty('--mag-y', '0px');
+            });
+        });
+    }
+
+    /* -------------------------------------------------------
        7. NAVBAR — evidenzia link attivo in base alla pagina
     ------------------------------------------------------- */
     const path = window.location.pathname.split('/').pop() || 'index.html';

@@ -36,7 +36,7 @@
 
     <!-- NAVBAR -->
     <nav class="ltutor-navbar" id="navbar">
-        <div class="container">
+        <div class="container navbar-inner">
             <a href="index.html" class="ltutor-logo">
                 <div class="ltutor-logo-icon">
                     <i class="fas fa-graduation-cap"></i>
@@ -45,13 +45,28 @@
                     <span class="lt-l">L</span><span class="lt-tutor">TUTOR</span>
                 </span>
             </a>
-            <nav class="ltutor-nav-links">
+            
+            <nav class="ltutor-nav-links desktop-only">
                 <a href="#team" class="active-page">Team</a>
                 <a href="lorenzo.html">Lorenzo</a>
                 <a href="lorenzo.html#contact" class="nav-cta">Prenota lezione</a>
             </nav>
+
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
+
+    <!-- MOBILE NAV OVERLAY -->
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-inner">
+            <a href="index.html" class="mobile-nav-link active">Team</a>
+            <a href="lorenzo.html" class="mobile-nav-link">Lorenzo</a>
+            <a href="lorenzo.html#contact" class="mobile-nav-link cta">Prenota lezione</a>
+        </div>
+    </div>
 
     <!-- HERO -->
     <section class="hero" id="home">
@@ -230,67 +245,42 @@
         </div>
     </section>
 
-    <!-- JOIN THE TEAM / AMBASSADORS -->
-    <section class="section" id="join" style="padding: 100px 0; background: #fff; overflow:hidden;">
+    <!-- SEZIONE COLLABORA (Semplificata) -->
+    <section class="section" id="join" style="padding: 100px 0; background: #fafafa;">
         <div class="container">
-            <div class="section-header">
-                <div class="section-tag"><i class="fas fa-rocket"></i> Opportunità</div>
-                <h2 class="section-title">Entra nel mondo <span class="underline-accent">LTUTOR</span></h2>
-                <p class="section-subtitle mt-16">
-                    Sia che tu voglia insegnare o aiutarci a crescere, abbiamo un posto per te.
-                </p>
+            <div class="section-header" style="margin-bottom:50px;">
+                <div class="section-tag"><i class="fas fa-handshake"></i> Collabora</div>
+                <h2 class="section-title">Cresci con <span class="underline-accent">Noi</span></h2>
             </div>
-
-            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:30px; margin-top:60px;">
-                
-                <!-- CARD 1: Candidatura Tutor -->
-                <div class="fade-in" style="background:var(--c-light); border-radius:var(--radius-lg); padding:35px; border:1px solid rgba(0,0,0,0.05); display:flex; flex-direction:column; justify-content:space-between; position:relative; overflow:hidden;">
-                    <div style="position:relative; z-index:2;">
-                        <div style="width:45px; height:45px; background:var(--c-accent); color:white; display:flex; align-items:center; justify-content:center; border-radius:10px; margin-bottom:20px; font-size:1.2rem;">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h3 style="font-size:1.3rem; font-weight:800; margin-bottom:12px;">Insegna con noi</h3>
-                        <p style="color:var(--c-text-muted); font-size:0.88rem; line-height:1.6; margin-bottom:20px;">
-                            Valorizziamo la vera passione per l'insegnamento. Se sei un esperto e sai trasmettere concetti con chiarezza, candidati come tutor nel nostro team d'élite.
-                        </p>
+            
+            <div style="background:#fff; border-radius:30px; padding:20px; box-shadow:0 10px 40px rgba(0,0,0,0.04); border:1px solid rgba(0,0,0,0.05);">
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:20px;">
+                    
+                    <!-- Opzione 1 -->
+                    <div style="padding:30px; text-align:center; border-right:1px solid #f0f0f0;">
+                        <i class="fas fa-graduation-cap" style="font-size:1.8rem; color:var(--c-accent); margin-bottom:15px;"></i>
+                        <h4 style="font-weight:700; margin-bottom:10px;">Candidati come Tutor</h4>
+                        <p style="font-size:0.85rem; color:var(--c-text-muted); margin-bottom:20px;">Insegna la tua materia d'eccellenza.</p>
+                        <a href="https://wa.me/393518933300?text=Candidatura%20Tutor" target="_blank" class="btn btn-ghost" style="font-size:0.8rem; padding:8px 20px; border-color:var(--c-accent); color:var(--c-accent);">Inizia</a>
                     </div>
-                    <a href="https://wa.me/393518933300?text=Ciao%20Lorenzo!%20Vorrei%20candidarmi%20come%20tutor%20nel%20vostro%20team." target="_blank" rel="noopener" class="btn btn-primary" style="align-self:flex-start; padding:10px 20px; font-size:0.85rem;">
-                        <i class="fab fa-whatsapp"></i> Candidati ora
-                    </a>
-                </div>
 
-                <!-- CARD 3 (NUOVA): Coordinamento -->
-                <div class="fade-in" style="background:#fff; border-radius:var(--radius-lg); padding:35px; border:1px solid var(--c-accent); display:flex; flex-direction:column; justify-content:space-between; position:relative; overflow:hidden; box-shadow:0 15px 35px rgba(58,141,141,0.1);">
-                    <div style="position:relative; z-index:2;">
-                        <div style="width:45px; height:45px; background:var(--c-accent-lt); color:var(--c-dark); display:flex; align-items:center; justify-content:center; border-radius:10px; margin-bottom:20px; font-size:1.2rem;">
-                            <i class="fas fa-tasks"></i>
-                        </div>
-                        <h3 style="font-size:1.3rem; font-weight:800; margin-bottom:12px;">Gestione & Matching</h3>
-                        <p style="color:var(--c-text-muted); font-size:0.88rem; line-height:1.6; margin-bottom:20px;">
-                            Cerchiamo una figura di fiducia per **gestire l'affidamento dei tutor ai ragazzi**, monitorare la qualità e coordinare le richieste in entrata.
-                        </p>
+                    <!-- Opzione 2 -->
+                    <div style="padding:30px; text-align:center; border-right:1px solid #f0f0f0;">
+                        <i class="fas fa-tasks" style="font-size:1.8rem; color:var(--c-dark); margin-bottom:15px;"></i>
+                        <h4 style="font-weight:700; margin-bottom:10px;">Gestione & Matching</h4>
+                        <p style="font-size:0.85rem; color:var(--c-text-muted); margin-bottom:20px;">Coordina l'affidamento dei tutor.</p>
+                        <a href="https://wa.me/393518933300?text=Candidatura%20Gestione" target="_blank" class="btn btn-ghost" style="font-size:0.8rem; padding:8px 20px; border-color:var(--c-dark); color:var(--c-dark);">Gestisci</a>
                     </div>
-                    <a href="https://wa.me/393518933300?text=Ciao%20Lorenzo!%20Sono%20interessato%20alla%20posizione%20di%20Gestione%20e%20Matching%20tutor/studenti." target="_blank" rel="noopener" class="btn btn-primary" style="align-self:flex-start; padding:10px 20px; font-size:0.85rem; background:var(--c-dark);">
-                        <i class="fab fa-whatsapp"></i> Gestisci il team
-                    </a>
-                </div>
 
-                <!-- CARD 2: Candidatura Promoter -->
-                <div class="fade-in" style="background:linear-gradient(140deg, var(--c-dark) 0%, #1a5050 100%); border-radius:var(--radius-lg); padding:35px; color:white; display:flex; flex-direction:column; justify-content:space-between; position:relative; overflow:hidden; box-shadow:var(--shadow-lg);">
-                    <div style="position:relative; z-index:2;">
-                        <div style="width:45px; height:45px; background:rgba(255,255,255,0.15); color:white; display:flex; align-items:center; justify-content:center; border-radius:10px; margin-bottom:20px; font-size:1.2rem;">
-                            <i class="fas fa-megaphone"></i>
-                        </div>
-                        <h3 style="font-size:1.3rem; font-weight:800; margin-bottom:12px;">Promozione (Profit)</h3>
-                        <p style="color:rgba(255,255,255,0.65); font-size:0.88rem; line-height:1.6; margin-bottom:20px;">
-                            Trova nuovi studenti per LTUTOR e verrai retribuito per ogni percorso avviato. Un'opportunità perfetta per chi ha molti contatti nel mondo studentesco.
-                        </p>
+                    <!-- Opzione 3 -->
+                    <div style="padding:30px; text-align:center;">
+                        <i class="fas fa-bullhorn" style="font-size:1.8rem; color:var(--c-accent-lt); margin-bottom:15px;"></i>
+                        <h4 style="font-weight:700; margin-bottom:10px;">Promozione (Profit)</h4>
+                        <p style="font-size:0.85rem; color:var(--c-text-muted); margin-bottom:20px;">Paga per ogni studente trovato.</p>
+                        <a href="https://wa.me/393518933300?text=Candidatura%20Promozione" target="_blank" class="btn btn-ghost" style="font-size:0.8rem; padding:8px 20px; border-color:var(--c-accent-lt); color:var(--c-accent-lt);">Guadagna</a>
                     </div>
-                    <a href="https://wa.me/393518933300?text=Ciao%20Lorenzo!%20Sono%20interessato%20alla%20collaborazione%20retribuita%20per%20trovare%20studenti." target="_blank" rel="noopener" class="btn btn-outline" style="align-self:flex-start; border-color:var(--c-accent-lt); color:var(--c-accent-lt); padding:10px 20px; font-size:0.85rem;">
-                        <i class="fab fa-whatsapp"></i> Guadagna con noi
-                    </a>
-                </div>
 
+                </div>
             </div>
         </div>
     </section>

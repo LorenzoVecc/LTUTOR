@@ -247,14 +247,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* -------------------------------------------------------
-       7. NAVBAR — evidenzia link attivo in base alla pagina
+       10. MOBILE MENU TOGGLE
     ------------------------------------------------------- */
-    const path = window.location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.ltutor-nav-links a').forEach(link => {
-        const href = link.getAttribute('href');
-        if (href && href.startsWith(path)) {
-            link.classList.add('active-page');
-        }
-    });
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileNav    = document.getElementById('mobile-nav');
+
+    if (mobileToggle && mobileNav) {
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Chiudi menu al click sui link
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
 
 });

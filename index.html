@@ -8,8 +8,8 @@
     <!-- Open Graph -->
     <meta property="og:type"        content="website">
     <meta property="og:url"         content="https://ltutor.netlify.app/">
-    <meta property="og:title"       content="LTUTOR — Team di tutor | Prima ora GRATIS">
-    <meta property="og:description" content="Lezioni di Matematica e Informatica con il team LTUTOR. Prima ora con il coordinatore Lorenzo completamente gratuita. Prenota ora!">
+    <meta property="og:title"       content="LTUTOR — Team di tutor | Soddisfatti o non pagate">
+    <meta property="og:description" content="Lezioni di Matematica e Informatica con il team LTUTOR. Prima lezione con garanzia 100% Soddisfatti o Rimborsati. Prenota ora!">
     <meta property="og:image"       content="https://ltutor.netlify.app/images/Postazione.jpg?v=1">
     <!-- Twitter -->
     <meta name="twitter:card"        content="summary_large_image">
@@ -49,7 +49,7 @@
             <nav class="ltutor-nav-links desktop-only">
                 <a href="#team" class="active-page">Team</a>
                 <a href="lorenzo.html">Lorenzo</a>
-                <a href="lorenzo.html#contact" class="nav-cta">Prenota lezione</a>
+                <a href="#footer-contact" class="nav-cta">Contatti</a>
             </nav>
 
             <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
@@ -64,7 +64,7 @@
         <div class="mobile-nav-inner">
             <a href="index.html" class="mobile-nav-link active">Team</a>
             <a href="lorenzo.html" class="mobile-nav-link">Lorenzo</a>
-            <a href="lorenzo.html#contact" class="mobile-nav-link cta">Prenota lezione</a>
+            <a href="#footer-contact" class="mobile-nav-link cta">Contatti</a>
         </div>
     </div>
 
@@ -89,8 +89,8 @@
                         <a href="#team" class="btn btn-primary">
                             <i class="fas fa-users"></i> Scegli il tuo Tutor
                         </a>
-                        <a href="lorenzo.html#contact" class="btn btn-outline">
-                            <i class="fab fa-whatsapp"></i> Scrivici
+                        <a href="#footer-contact" class="btn btn-outline">
+                            <i class="fas fa-info-circle"></i> Come funziona
                         </a>
                     </div>
                     <!-- TRUST PILLS -->
@@ -222,19 +222,7 @@
         </div>
     </section>
 
-    <!-- CTA STRIP -->
-    <section class="section bg-light" style="padding: 70px 0;">
-        <div class="container text-center">
-            <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
-                <a href="lorenzo.html" class="btn btn-primary">
-                    <i class="fas fa-user"></i> Vedi profilo di Lorenzo
-                </a>
-                <a href="https://wa.me/393518933300" target="_blank" rel="noopener" class="btn btn-ghost">
-                    <i class="fab fa-whatsapp"></i> Scrivici su WhatsApp
-                </a>
-            </div>
-        </div>
-    </section>
+    <!-- (CTA STRIP spostata in basso) -->
 
     <!-- REFERRAL / INVITA UN AMICO -->
     <section class="section referral-section" id="referral" style="padding: 100px 0; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; overflow: hidden; position: relative;">
@@ -248,10 +236,10 @@
                         <i class="fas fa-gift"></i> Programma Referral
                     </div>
                     <h2 class="section-title" style="color: white; text-align: left; margin-bottom: 24px; font-size: 2.8rem; line-height: 1.1;">
-                        Invita un amico,<br><span style="color: #4ade80;">guadagna un'ora</span><br>con me!
+                        Porta un amico,<br><span style="color: #4ade80;">ricevi un bonus</span><br>lezione!
                     </h2>
                     <p style="font-size: 1.1rem; color: rgba(255,255,255,0.7); margin-bottom: 32px; line-height: 1.7;">
-                        Ricevi <strong>un'ora di lezione GRATUITA</strong> con il coordinatore Lorenzo per OGNI nuovo studente che presenti e che completa la sua prima sessione STEM/IA.
+                        Ricevi <strong>un'ora bonus di lezione</strong> con il coordinatore Lorenzo per OGNI nuovo studente che presenti e che completa la sua prima sessione STEM/IA.
                     </p>
                     
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 40px;">
@@ -272,9 +260,9 @@
                 <!-- Visual section with flyer vibe -->
                 <div class="referral-visual" style="display: flex; justify-content: center;">
                     <div style="width: 280px; aspect-ratio: 9/16; background: #0e1b21; border: 2px solid #4ade80; border-radius: 20px; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; box-shadow: 0 0 30px rgba(74,222,128,0.2);">
-                        <div style="color: #4ade80; font-weight: 800; font-size: 1.1rem; text-align: center;">INVITA UN AMICO, GUADAGNA UN'ORA CON ME!</div>
+                        <div style="color: #4ade80; font-weight: 800; font-size: 1.1rem; text-align: center;">PORTA UN AMICO, RICEVI UN BONUS!</div>
                         <i class="fas fa-graduation-cap" style="font-size: 3rem; color: #4ade80;"></i>
-                        <div style="color: white; font-size: 0.75rem; text-align: center;">Ricevi un'ora di lezione GRATUITA con me per OGNI nuovo studente.</div>
+                        <div style="color: white; font-size: 0.75rem; text-align: center;">Ricevi un'ora bonus con me per OGNI nuovo studente presentato.</div>
                         <div style="background: white; padding: 5px; border-radius: 5px;"><div style="width: 60px; height: 60px; background: black;"></div></div>
                     </div>
                 </div>
@@ -302,6 +290,31 @@
                     <p style="font-size: 0.9rem; color: var(--c-text-muted); margin-bottom: 20px;">Collabora per trovare nuovi studenti.</p>
                     <a href="https://wa.me/393518933300?text=Candidatura%20Promozione" class="btn btn-outline" style="font-size: 0.85rem;">Guadagna</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEZIONE FINALE CONTATTI -->
+    <section class="section" id="footer-contact" style="padding: 100px 0; background: var(--c-white); border-top: 1px solid var(--c-border);">
+        <div class="container text-center">
+            <div class="section-tag"><i class="fas fa-phone"></i> Inizia ora</div>
+            <h2 class="section-title">Pronto a migliorare?</h2>
+            <p class="section-subtitle mt-16 mb-40">Prenota la tua prima lezione o chiedici informazioni. Rispondiamo subito.</p>
+            
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
+                <a href="https://wa.me/393518933300" target="_blank" rel="noopener" class="btn btn-primary" style="padding: 18px 45px; font-size: 1.1rem; background: #22c55e; border-color: #22c55e;">
+                    <i class="fab fa-whatsapp"></i> Scrivici su WhatsApp
+                </a>
+                <a href="tel:+393518933300" class="btn btn-outline" style="padding: 18px 45px; font-size: 1.1rem; color: var(--c-dark); border-color: var(--c-dark);">
+                    <i class="fas fa-phone"></i> Chiamaci
+                </a>
+            </div>
+            
+            <div style="background: var(--c-bg); padding: 30px; border-radius: 20px; max-width: 600px; margin: 0 auto; border: 1px solid var(--c-border);">
+                <h3 style="font-weight: 700; margin-bottom: 10px; color: var(--c-dark);">100% Soddisfatti o Rimborsati</h3>
+                <p style="font-size: 0.9rem; color: var(--c-text-muted);">
+                    Paghi la lezione solo se sei soddisfatto del metodo. Nessun vincolo, nessun contratto.
+                </p>
             </div>
         </div>
     </section>
